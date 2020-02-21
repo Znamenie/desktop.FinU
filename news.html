@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<meta data-n-head="1" name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	<div class="main">
+		<div class="main__layout">
+
+			<div class="showIn" id="showInNews">
+				<div class="showIn__header">
+					<a onclick="hideInNews()">
+						<img src="img/main-logo.svg" alt>
+					</a>
+				</div>
+				<div class="showIn__form" id="registration">
+					<p class="showIn__form_title">Вход / Регистрация</p>
+					<div class="showIn__form_tele">
+						<p>Телефон</p>
+						<input type="text" class="phone-num" id="phoneNewsOne" name="user_phone-news" placeholder="+7 927 - 111 - 11 - 11">
+					</div>
+					<div class="showIn__form_password">
+						<input type="password" id="password-input" placeholder="Введите пароль" name="password">
+						<a class="password-control" onclick="return show_hide_password(this);"></a>
+					</div>
+					<div class="showIn__form_feedback">
+						<a href="/">
+							<p>Регистрация</p>
+						</a>
+						<a onclick="passwordRecovery()">
+							<p>Забыли пароль?</p>
+						</a>
+					</div>
+					<div class="showIn__form_button">
+						<p>Войти</p>
+					</div>
+				</div>
+
+				<div class="showIn__form" id="passwordRecovery" style="display: none;">
+					<div class="showIn__form_close" onclick="closeRecovery()">
+						<img src="img/showIn/close.svg" alt>
+					</div>
+					<p class="showIn__form_title">Восстановление пароля</p>
+					<div class="showIn__form_desc">
+						<p>Мы отправим на ваш номер  код.</p>
+						<p>После подтверждения вы сможете назначить новый пароль</p>
+					</div>
+					<div class="showIn__form_tele">
+						<p>Телефон</p>
+						<input type="text" class="phone-num" id="phoneNewsTwo" name="user_phone-news-two" placeholder="+7 927 - 111 - 11 - 11">
+					</div>
+					<div class="showIn__form_code" id="formCode">
+						<p>Введите код из смс</p>
+						<input type="password" placeholder="* * * *">
+					</div>
+					<div class="showIn__form_button" id="sendNumber" onclick="showCodeForm()">
+						<p>Выслать код на телефон</p>
+					</div>
+				</div>
+
+				<div class="showIn__form" id="complete" style="display: none;">
+					<div class="showIn__form_close">
+						<img src="img/showIn/close.svg" alt>
+					</div>
+					<p class="showIn__form_title">Отлично!</p>
+					<p class="showIn__form_desc">Теперь вы можете назначить новый пароль для входа в<br>личный кабинет</p>
+					<div class="showIn__form_password">
+						<input type="password" id="password-input-two" placeholder="BuLkA_HleBa736" name="password">
+						<a class="password-control-two" onclick="return show_hide_password_two(this);"></a>
+					</div>
+					<div class="showIn__form_button">
+						<p>Перейти в кабинет</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="main__layout_landing" id="main-news-landing">				
+
+				<div class="header"> <!-- Шапка сайта -->
+					<div class="header__logo">
+						<a href="index.html">
+							<img src="img/main-logo.svg" alt>
+						</a>
+					</div>
+					<div class="header__links" id="menu">
+						<div class="header__links_links-item">
+							<a href="#program-features">Возможности</a>
+						</div>
+						<div class="header__links_links-item">
+							<a href="#reviews">Отзывы</a>
+						</div>
+						<div class="header__links_links-item">
+							<a href="#mobile-app">Приложения</a>
+						</div>
+						<div class="header__links_links-item">
+							<a href="#tariffs">Тарифы</a>
+						</div>
+						<div class="header__links_links-item">
+							<a href="#blog">Блог</a>
+						</div>
+					</div>
+					<div class="header__login">
+						<button id="showInButton" onclick="showInNews()">Вход</button>
+					</div>
+				</div>
+
+				<div class="blog-news" id="blogNews">
+					<div class="blog-news__header">
+						<div class="blog-news__header_main">
+							<div class="blog-news__header_main_breadcrumbs">
+								<p>Главная  -  Блог  -  Как помочь с финансовым учетом ИП?</p>
+							</div>
+							<div class="blog-news__header_main_title">
+								<h2>Как помочь с учетом финансов ИП?</h2>
+							</div>
+							<div class="blog-news__header_main_hashtags">
+								<p>#финучет</p>
+								<p>#предпринимательство</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="blog-news__container">
+						<p>Я много общаюсь с индивидуальными предпринимателями и опрос показал, что большинство из них ведет учет финансов в Excel. Преимущества: бесплатна в использовании и если создать шаблон, то не сложна в ведении. 
+						</p>
+						<p><b>Из заявленных минусов:</b>
+							<br>- часто «нечаянно» подтираются ячейки.
+							<br>- Отсутствует аналитика, которая выводит базовые отчеты, необходимые для принятия стратегических решений (при желании можно в excel и это сделать, но тогда ведение становится сложным, неумелое использование сбивает формулы). 
+						</p>
+						<p><b>Из минусов, которые непоправимы: </b>
+							<br>- отсутствие интеграции с банками (весомый аргумент, из-за которого уходят от Excel)
+							<br>- взаимодействовать с программой можно исключительно при наличии Интернета и компьютера.
+						</p>
+						<p>
+							Другой распространенный вариант — 1С. Для среднего и макро бизнеса это удачное решение. В малом бизнесе ИП используют возможности программы на 1-2%, т.к. больше для решения задач не требуется. Из минусов стоит отметить высокую стоимость лицензии, привязку к компьютеру и «лишний» функционал, который усложняет работу.
+						</p>
+						<p>
+							Исходя из того, что рынку нужна программа, которая в плане ведения легка, как Excel, но в плане «серьезности» и аналитике не уступает 1С — мы создали сервис финучет.рф
+						</p>
+						<div class="blog-news__container_img">
+							<img src="img/newsIndex/operationHistory.png" alt>
+							<p>
+								<i>сервис учета финансов ИП</i>
+							</p>
+						</div>
+						<p>
+							Интуитивно понятная, работает с компьютера, телефона и планшета. Это сильное преимущество, т.к. часто траты проходят вне офиса (в магазине, в командировке и т.п.) и легко забыть внести расходы. Установите мобильное приложение и вносите приходы и расходы «на лету», и имейте под рукой достоверные финансовые показатели организации. Даже если отсутствует Интернет, смело вносите данные, информация выгрузится в базу, как только появится сеть.
+						</p>
+						<p>
+							Еще одно весомое преимущество — интеграция с банками. Все приходы и расходы, проходящие через расчетный счет — будут автоматически показываться в нашем сервисе.
+						</p>
+						<p>
+							Гостевой доступ к программе разрешит просматривать информацию в «режиме чтения» и защитит от внесения изменений. 
+						</p>
+						<h3>Планирование и аналитика</h3>
+						<div class="blog-news__container_img">
+							<img src="img/newsIndex/calendar.png" alt>
+							<p>
+								<i>планирование расходов ИП</i>
+							</p>
+						</div>
+						<p>
+							Сервис определяет вероятность кассового разрыва и заранее и предупреждает об этом. Планирование по приходам показывает ожидаемые поступления и какой исход ожидать в конце месяца. А планирование по расходам показывает какие траты ожидаются и сигнализируют при риске нехватки денег на счету. 
+						</p>
+						<div class="blog-news__container_img">
+							<img src="img/newsIndex/planning.png" alt>
+							<p>
+								<i>планирование расходов ИП</i>
+							</p>
+						</div>
+						<p>
+							Отчеты выстроены таким образом, что показывают все денежные движения по контрагентам, высчитывается рентабельность и выводятся данные в графиках. По ним видно с какими клиентами выгодно работать, а какие проедают компанию. С ним интегрирован раздел «Заработная плата», в который заносятся сотрудники и назначается формат начисления ЗП (настраивается в пару кликов).
+						</p>
+						<p>
+							Чтобы ознакомиться с полным функционалом — переходите на главную страницу и активируйте доступ на 15 дней. Управляйте финансами грамотно, получайте достоверную информацию и шагайте на основе этих показателей в уверенное будущее.
+						</p>
+						<div class="blog-news__container_date-links">
+							<div class="blog-news__container_date-links_date">
+								<span>Обновлено: 21 сентября 2019 года</span>
+							</div>
+							<div class="blog-news__container_date-links_links">
+								<p>Поделиться:</p>
+								<a href="/">
+									<img src="img/newsIndex/vk.svg" alt>
+								</a>
+								<a href="/">
+									<img src="img/newsIndex/fb.svg" alt>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="blog-news__additional-container">
+						<div class="blog-news__additional-container_header">
+							<h4>Дополнительные знания</h4>
+							<h5>К списку статей</h5>
+							<h3>Также по этой тематике:</h3>
+						</div>
+						<div class="blog-news__additional-container_items">
+
+							<div class="container-item">
+								<div class="container-item__icon"></div>
+								<div class="container-item__text">
+									<div class="container-item__text_inner">
+										<div class="container-item__text_inner_content">
+											<p>Ведение финансового учета</p>
+										</div>
+										<div class="container-item__text_inner_hashtag">
+											<p>#финучет</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-item">
+								<div class="container-item__icon"></div>
+								<div class="container-item__text">
+									<div class="container-item__text_inner">
+										<div class="container-item__text_inner_content">
+											<p>5 советов ИП по самостоятельному ведению финансового учета</p>
+										</div>
+										<div class="container-item__text_inner_hashtag">
+											<p>#предприниматель</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-item">
+								<div class="container-item__icon"></div>
+								<div class="container-item__text">
+									<div class="container-item__text_inner">
+										<div class="container-item__text_inner_content">
+											<p>Программы для управления финансами предприятия</p>
+										</div>
+										<div class="container-item__text_inner_hashtag">
+											<p>#налоги</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-item">
+								<div class="container-item__icon"></div>
+								<div class="container-item__text">
+									<div class="container-item__text_inner">
+										<div class="container-item__text_inner_content">
+											<p>Учет финансовых доходов ИП (индивидуального предпринимателя)</p>
+										</div>
+										<div class="container-item__text_inner_hashtag">
+											<p>#лайфхаки</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-item">
+								<div class="container-item__icon"></div>
+								<div class="container-item__text">
+									<div class="container-item__text_inner">
+										<div class="container-item__text_inner_content">
+											<p>TOP-5 упущений при учете финансовых расходов ИП (индивидуального предпринимателя)</p>
+										</div>
+										<div class="container-item__text_inner_hashtag">
+											<p>#предприниматель</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="container-item">
+								<div class="container-item__icon"></div>
+								<div class="container-item__text">
+									<div class="container-item__text_inner">
+										<div class="container-item__text_inner_content">
+											<p>Система учета финансов</p>
+										</div>
+										<div class="container-item__text_inner_hashtag">
+											<p>#налоги</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="footer" id="footerNews"> <!-- Подвал -->
+					<div class="footer__logo">
+						<img src="img/footer/logo.png" alt>
+						<p>Онлайн-сервис и мобильное приложение для финансового и управленческого учета</p>
+					</div>
+					<div class="footer__links">
+						<div class="footer__links_left">
+							<a href="/">Войти в личный кабинет</a>
+							<a href="/">Блог</a>
+							<a href="/">Партнерская программа</a>
+						</div>
+						<div class="footer__links_right">
+							<a href="/">support@finuchet.info</a>
+							<a href="/">+7 495 765 89 87</a>
+							<div class="footer__links_right_social">
+								<a href="/">
+									<img src="img/footer/telegram.svg" alt>
+								</a>
+								<a href="/">
+									<img src="img/footer/youtube.svg" alt>
+								</a>
+								<a href="/">
+									<img src="img/footer/instagram.svg" alt>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__info">
+						<div class="footer__info_img">
+							<img src="img/footer/sberbank.svg" alt>
+							<img src="img/footer/master-card.svg" alt>
+							<img src="img/footer/visa.svg" alt>
+						</div>
+						<div class="footer__info_text">
+							<p>Мы используем cookies для сбора обезличенных персональных данных. Оставаясь на сайте, вы соглашаетесь на сбор таких данных.</p>
+						</div>
+						<div class="footer__info_links">
+							<a href="/">Политика конфиденциальности</a>
+							<p>|</p> 
+							<a href="/">Пользовательское соглашение</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/phone-mask/jquery.maskedinput.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/news.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>

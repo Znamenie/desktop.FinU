@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<meta data-n-head="1" name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+	<div class="main">
+		<div class="main__layout">
+
+			<div class="showIn" id="showInBlog">
+				<div class="showIn__header">
+					<a onclick="hideInThree()">
+						<img src="img/main-logo.svg" alt>
+					</a>
+				</div>
+				<div class="showIn__form" id="registration">
+					<p class="showIn__form_title">Вход / Регистрация</p>
+					<div class="showIn__form_tele">
+						<p>Телефон</p>
+						<input type="text" class="phone-num" id="phoneBlogOne" name="user_phone" placeholder="+7 927 - 111 - 11 - 11">
+					</div>
+					<div class="showIn__form_password">
+						<input type="password" id="password-input" placeholder="Введите пароль" name="password">
+						<a class="password-control" onclick="return show_hide_password(this);"></a>
+					</div>
+					<div class="showIn__form_feedback">
+						<a href="/">
+							<p>Регистрация</p>
+						</a>
+						<a onclick="passwordRecovery()">
+							<p>Забыли пароль?</p>
+						</a>
+					</div>
+					<div class="showIn__form_button">
+						<p>Войти</p>
+					</div>
+				</div>
+
+				<div class="showIn__form" id="passwordRecovery" style="display: none;">
+					<div class="showIn__form_close" onclick="closeRecovery()">
+						<img src="img/showIn/close.svg" alt>
+					</div>
+					<p class="showIn__form_title">Восстановление пароля</p>
+					<div class="showIn__form_desc">
+						<p>Мы отправим на ваш номер  код.</p>
+						<p>После подтверждения вы сможете назначить новый пароль</p>
+					</div>
+					<div class="showIn__form_tele">
+						<p>Телефон</p>
+						<input type="text" class="phone-num" id="phoneBlogTwo" name="user_phone" placeholder="+7 927 - 111 - 11 - 11">
+					</div>
+					<div class="showIn__form_code" id="formCode">
+						<p>Введите код из смс</p>
+						<input type="password" placeholder="* * * *">
+					</div>
+					<div class="showIn__form_button" id="sendNumber" onclick="showCodeForm()">
+						<p>Выслать код на телефон</p>
+					</div>
+				</div>
+
+				<div class="showIn__form" id="complete" style="display: none;">
+					<div class="showIn__form_close">
+						<img src="img/showIn/close.svg" alt>
+					</div>
+					<p class="showIn__form_title">Отлично!</p>
+					<p class="showIn__form_desc">Теперь вы можете назначить новый пароль для входа в<br>личный кабинет</p>
+					<div class="showIn__form_password">
+						<input type="password" id="password-input-two" placeholder="BuLkA_HleBa736" name="password">
+						<a class="password-control-two" onclick="return show_hide_password_two(this);"></a>
+					</div>
+					<div class="showIn__form_button">
+						<p>Перейти в кабинет</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="main__layout_landing" id="main-blog-landing">		
+
+				<div class="header"> <!-- Шапка сайта -->
+					<div class="header__logo">
+						<a href="index.html">
+							<img src="img/main-logo.svg" alt>
+						</a>
+					</div>
+					<div class="header__links" id="menu">
+						<div class="header__links_links-item">
+							<a href="#program-features">Возможности</a>
+						</div>
+						<div class="header__links_links-item">
+							<a href="#reviews">Отзывы</a>
+						</div>
+						<div class="header__links_links-item">
+							<a href="#mobile-app">Приложения</a>
+						</div>
+						<div class="header__links_links-item">
+							<a href="#tariffs">Тарифы</a>
+						</div>
+						<div class="header__links_links-item">
+							<a href="#blog">Блог</a>
+						</div>
+					</div>
+					<div class="header__login">
+						<button id="showInButton" onclick="showInThree()">Вход</button>
+					</div>
+				</div>
+
+				<div class="blog-content" id="blogBlog" style="display: flex;">
+					<div class="blog-content__container">
+						<div class="blog-content__container_header">
+							<h2>Блог</h2>
+							<div class="blog-content__container_header_tabs">
+								<div class="buttons">
+									<button class="buttons__tablinks active">Главная</button>
+									<button class="buttons__tablinks">Финучет</button>
+									<button class="buttons__tablinks">Лайфхаки</button>
+									<button class="buttons__tablinks">Интересности</button>
+									<button class="buttons__tablinks">Маркетинг</button>
+									<button class="buttons__tablinks">Новости</button>
+								</div>
+								<div class="search">
+									<img src="img/blogIndex/search.svg" alt>
+								</div>
+							</div>
+							<hr>
+							<div class="blog-content__container_header_mobileTabs">
+								<h3>Популярные темы</h3>
+								<div class="mobileTabs-hashtags">
+									<p>#финучет</p>
+									<p>#лайфхаки</p>
+									<p>#предприниматель</p>
+									<p>#маркетинг</p>
+									<p>#новости</p>
+									<p class="takeActive">Все тематики</p>
+								</div>
+							</div>
+						</div>
+						<div class="blog-content__container_content">	
+							<div class="content-item">
+								<a href="news.html">
+									<div class="content-item__img">
+										<img src="img/blogIndex/icon.png" alt>
+									</div>
+									<div class="content-item__title">
+										<h3>Как помочь с учетом финансов ИП?</h3>
+									</div>
+								</a>
+							</div>
+							<div class="content-item">
+								<a href="news.html">
+									<div class="content-item__img">
+										<img src="img/blogIndex/icon.png" alt>
+									</div>
+									<div class="content-item__title">
+										<h3>TOP-5 упущений при учете финансовых расходов ИП (индивидуального предпринимателя)</h3>
+									</div>
+								</a>
+							</div>
+							<div class="content-item">
+								<a href="news.html">
+									<div class="content-item__img">
+										<img src="img/blogIndex/icon.png" alt>
+									</div>
+									<div class="content-item__title">
+										<h3>5 советов ИП по самостоятельному ведению финансового учета</h3>
+									</div>
+								</a>
+							</div>
+							<div class="content-item">
+								<a href="news.html">
+									<div class="content-item__img">
+										<img src="img/blogIndex/icon.png" alt>
+									</div>
+									<div class="content-item__title">
+										<h3>Программы для управления финансами предприятия</h3>
+									</div>
+								</a>
+							</div>
+							<div class="content-item">
+								<a href="news.html">
+									<div class="content-item__img">
+										<img src="img/blogIndex/icon.png" alt>
+									</div>
+									<div class="content-item__title">
+										<h3>Система учета финансов</h3>
+									</div>
+								</a>
+							</div>
+							<div class="content-item">
+								<a href="news.html">
+									<div class="content-item__img">
+										<img src="img/blogIndex/icon.png" alt>
+									</div>
+									<div class="content-item__title">
+										<h3>Программы для управления финансами предприятия</h3>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="blog-content__container_show-more">
+							<img src="img/blogIndex/refresh.svg" alt>
+							<p>Показать больше</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer" id="footerBlog" style="display: flex;"> <!-- Подвал -->
+					<div class="footer__logo">
+						<img src="img/footer/logo.png" alt>
+						<p>Онлайн-сервис и мобильное приложение для финансового и управленческого учета</p>
+					</div>
+					<div class="footer__links">
+						<div class="footer__links_left">
+							<a href="/">Войти в личный кабинет</a>
+							<a href="/">Блог</a>
+							<a href="/">Партнерская программа</a>
+						</div>
+						<div class="footer__links_right">
+							<a href="/">support@finuchet.info</a>
+							<a href="/">+7 495 765 89 87</a>
+							<div class="footer__links_right_social">
+								<a href="/">
+									<img src="img/footer/telegram.svg" alt>
+								</a>
+								<a href="/">
+									<img src="img/footer/youtube.svg" alt>
+								</a>
+								<a href="/">
+									<img src="img/footer/instagram.svg" alt>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer__info">
+						<div class="footer__info_img">
+							<img src="img/footer/sberbank.svg" alt>
+							<img src="img/footer/master-card.svg" alt>
+							<img src="img/footer/visa.svg" alt>
+						</div>
+						<div class="footer__info_text">
+							<p>Мы используем cookies для сбора обезличенных персональных данных. Оставаясь на сайте, вы соглашаетесь на сбор таких данных.</p>
+						</div>
+						<div class="footer__info_links">
+							<a href="/">Политика конфиденциальности</a>
+							<p>|</p> 
+							<a href="/">Пользовательское соглашение</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/phone-mask/jquery.maskedinput.min.js"></script>
+	<script src="js/blog.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>
