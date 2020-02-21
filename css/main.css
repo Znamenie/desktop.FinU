@@ -1,50 +1,50 @@
 @font-face {
   font-family: 'Gilroy';
-  src: url("../../fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
-  src: url("../../fonts/Gilroy/Gilroy-Regular.eot") format("embedded-opentype");
-  src: url("../../fonts/Gilroy/Gilroy-Regular.woff") format("woff");
-  src: url("../../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2");
+  src: url("../fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
+  src: url("../fonts/Gilroy/Gilroy-Regular.eot") format("embedded-opentype");
+  src: url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff");
+  src: url("../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'SF UI Text Regular';
-  src: url("../../fonts/SFUIText/SFUIText-Regular.ttf") format("truetype");
-  src: url("../../fonts/SFUIText/SFUIText-Regular.woff") format("woff");
+  src: url("../fonts/SFUIText/SFUIText-Regular.ttf") format("truetype");
+  src: url("../fonts/SFUIText/SFUIText-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'SF UI Text Bold';
-  src: local("SF UI Text Bold"), url("../../fonts/SFUIText/SFUIText-Bold.ttf") format("truetype");
-  src: local("SF UI Text Bold"), url("../../fonts/SFUIText/SFUIText-Bold.eot") format("embedded-opentype");
-  src: local("SF UI Text Bold"), url("../../fonts/SFUIText/SFUIText-Bold.woff") format("woff");
-  src: local("SF UI Text Bold"), url("../../fonts/SFUIText/SFUIText-Bold.woff2") format("woff2");
+  src: local("SF UI Text Bold"), url("../fonts/SFUIText/SFUIText-Bold.ttf") format("truetype");
+  src: local("SF UI Text Bold"), url("../fonts/SFUIText/SFUIText-Bold.eot") format("embedded-opentype");
+  src: local("SF UI Text Bold"), url("../fonts/SFUIText/SFUIText-Bold.woff") format("woff");
+  src: local("SF UI Text Bold"), url("../fonts/SFUIText/SFUIText-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../../fonts/Roboto/Roboto.ttf") format("truetype");
-  src: url("../../fonts/Roboto/Roboto.woff") format("woff");
-  src: url("../../fonts/Roboto/Roboto.woff2") format("woff2");
+  src: url("../fonts/Roboto/Roboto.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto.woff") format("woff");
+  src: url("../fonts/Roboto/Roboto.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Roboto Bold';
-  src: url("../../fonts/Roboto/Robotobold.ttf") format("truetype");
-  src: url("../../fonts/Roboto/Robotobold.woff") format("woff");
-  src: url("../../fonts/Roboto/Robotobold.woff2") format("woff2");
+  src: url("../fonts/Roboto/Robotobold.ttf") format("truetype");
+  src: url("../fonts/Roboto/Robotobold.woff") format("woff");
+  src: url("../fonts/Roboto/Robotobold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Roboto Italic';
-  src: url("../../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
-  src: url("../../fonts/Roboto/Roboto-Italic.eot") format("embedded-opentype");
-  src: url("../../fonts/Roboto/Roboto-Italic.woff") format("woof");
-  src: url("../../fonts/Roboto/Roboto-Italic.woff2") format("woff2");
+  src: url("../fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+  src: url("../fonts/Roboto/Roboto-Italic.eot") format("embedded-opentype");
+  src: url("../fonts/Roboto/Roboto-Italic.woff") format("woof");
+  src: url("../fonts/Roboto/Roboto-Italic.woff2") format("woff2");
   font-style: italic;
   font-weight: normal; }
 
